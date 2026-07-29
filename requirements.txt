@@ -1,0 +1,20 @@
+# Choose only one PyTorch block: CUDA or CPU.
+
+# CUDA 12.4 (active): use for NVIDIA GPUs such as RTX 4060.
+# To use CPU, comment the next three lines and uncomment the CPU block below.
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+
+# CPU only (inactive): uncomment these three lines when CUDA is not used.
+# --extra-index-url https://download.pytorch.org/whl/cpu
+# torch==2.6.0+cpu
+# torchvision==0.21.0+cpu
+
+# Training and data pipeline
+Pillow
+matplotlib
+scikit-learn
+
+# Regenerate the lesson report in tools/
+python-docx

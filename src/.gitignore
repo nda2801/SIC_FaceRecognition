@@ -1,0 +1,45 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local datasets and downloaded archives
+src/dataset/
+data/
+datasets/
+archive.zip
+*.zip
+*.rar
+*.7z
+
+# Trained weights and exported models
+src/checkpoints/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.tflite
+
+# Generated training results and report assets
+outputs/
+src/outputs/
+*.log
+runs/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
