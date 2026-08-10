@@ -9,7 +9,7 @@ def get_parser():
     parser.add_argument(
         "--experiment_name",
         type=str,
-        default="sic_facevit_vggface2_semi_hard",
+        default="sic_facevit_infonce_v2",
     )
 
     parser.add_argument(

@@ -159,10 +159,13 @@ def get_transforms(image_size):
         [
             transforms.Resize((image_size, image_size)),
             transforms.RandomHorizontalFlip(p=0.5),
-            transforms.RandomRotation(degrees=8),
-            transforms.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15),
+            transforms.RandomRotation(degrees=10),
+            transforms.RandomAffine(degrees=8, translate=(0.05, 0.05), scale=(0.95, 1.05)),
+            transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+            transforms.RandomApply([transforms.GaussianBlur(kernel_size=(3, 3), sigma=(0.1, 1.0))], p=0.3),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.5] * 3, std=[0.5] * 3),
+            transforms.RandomErasing(p=0.2, scale=(0.02, 0.15), value="random"),
         ]
     )
     eval_transform = transforms.Compose(
